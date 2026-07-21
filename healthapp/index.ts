@@ -28,8 +28,7 @@ app.get('/bmi', (req, res) => {
 });
 
 app.post('/exercises', (req, res) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const body: any = req.body;
+  const body: unknown = req.body;
 
   if (
     typeof body !== 'object' ||
